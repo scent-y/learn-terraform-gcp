@@ -8,8 +8,9 @@ terraform {
 }
 
 provider "google" {
-    credentials = file("/learn-terraform-gcp/sa.json")
+    credentials = file("./sa.json")
     project = "{project_id}"
+    region = "asia-northeast1-a"
 }
 
 resource "google_compute_network" "vpc_network" {
